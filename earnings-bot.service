@@ -1,0 +1,31 @@
+[Unit]
+Description=MEXC stock-earnings Telegram alert bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=earnings
+Group=earnings
+WorkingDirectory=/opt/earnings-bot
+EnvironmentFile=/opt/earnings-bot/.env
+ExecStart=/opt/earnings-bot/.venv/bin/python -m bot.main run
+Restart=always
+RestartSec=5
+
+# --- basic isolation ---
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+RestrictNamespaces=true
+RestrictRealtime=true
+LockPersonality=true
+ReadWritePaths=/opt/earnings-bot/data
+
+[Install]
+WantedBy=multi-user.target

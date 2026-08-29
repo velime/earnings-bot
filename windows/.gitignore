@@ -1,0 +1,8 @@
+.venv/
+build/
+dist/
+data/
+logs/
+.env
+seed_times.json
+__pycache__/

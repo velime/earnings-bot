@@ -1,0 +1,14 @@
+services:
+  earnings-bot:
+    build: .
+    image: earnings-bot:latest
+    container_name: earnings-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"

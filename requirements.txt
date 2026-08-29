@@ -1,0 +1,4 @@
+httpx>=0.27,<1.0
+python-dotenv>=1.0
+# zoneinfo (stdlib) needs the IANA database; ship it so DST math works on any host
+tzdata>=2024.1
