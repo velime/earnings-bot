@@ -181,13 +181,6 @@ notepad .env            # создаётся из .env.example при перво
 боту нужно в рантайме (`.env`, `data\`, `logs\`, `seed_times.json`), лежит внутри
 папки `windows\`. Подробности — [windows/README.md](windows/README.md).
 
-### Тесты (без сети, всё на заглушках)
-
-```bash
-pip install -r requirements-dev.txt
-python -m pytest -q
-```
-
 ---
 
 ## Конфигурация

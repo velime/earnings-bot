@@ -178,13 +178,6 @@ notepad .env            # created from .env.example on first build — fill it i
 the bot needs at runtime (`.env`, `data\`, `logs\`, `seed_times.json`) stays inside
 the `windows\` folder. See [windows/README.md](windows/README.md) for details.
 
-### Tests (no network, all stubbed)
-
-```bash
-pip install -r requirements-dev.txt
-python -m pytest -q
-```
-
 ---
 
 ## Configuration
